@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --open --hot --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "deploy:s3": "aws s3 sync ./build s3://platform-dev.feriasfacil.com.br --acl public-read"
   },
   "dependencies": {
     "@babel/core": "^7.21.8",
