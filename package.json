@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --open --hot --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "dependencies": {
     "@babel/core": "^7.21.8",
