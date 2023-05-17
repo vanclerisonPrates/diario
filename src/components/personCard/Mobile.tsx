@@ -1,3 +1,5 @@
+import SocialLinks from "../social-links";
+
 const PersonCardMobile = () => (
   <div className="flex flex-col">
     <div>
@@ -8,18 +10,8 @@ const PersonCardMobile = () => (
       </div>
     </div>
     <div className="flex gap-9  mt-2.5 items-center">
-      <div className="flex gap-2">
-        <a href="https://facebook.com">
-          <img src="/assets/images/facebook.svg" alt="facebook" />
-        </a>
-        <a href="https://twitter.com">
-          <img src="/assets/images/twitter.svg" alt="twitter" />
-        </a>
-        <a href="https://whatsapp.com">
-          <img src="/assets/images/whatsapp.svg" alt="whatsapp" />
-        </a>
-      </div>
-      <a href="https://news.google.com">
+      <SocialLinks />
+      <a href="https://news.google.com" title="Google News">
         <div className="flex flex-row bg-[#EAEAEA] items-center gap-2 min-w-[155px] h-[30px] justify-center rounded">
           <span className="flex font-['Roboto'] font-bold text-xs">
             SIGA NO{" "}

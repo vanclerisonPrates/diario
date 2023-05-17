@@ -1,9 +1,11 @@
+import SocialLinks from "../social-links";
+
 interface Props {
   isMobile: boolean;
 }
 
 const Footer = ({ isMobile }: Props) => (
-  <div
+  <footer
     className={
       isMobile
         ? "flex items-center justify-center flex-col"
@@ -12,17 +14,7 @@ const Footer = ({ isMobile }: Props) => (
   >
     <div className="flex gap-4 mb-[20px] mt-[20px] items-center">
       <span className="flex text-xs">compartilhe </span>
-      <div className="flex gap-2">
-        <a href="https://facebook.com">
-          <img src="/assets/images/facebook.svg" alt="facebook" />
-        </a>
-        <a href="https://twitter.com">
-          <img src="/assets/images/twitter.svg" alt="twitter" />
-        </a>
-        <a href="https://whatsapp.com">
-          <img src="/assets/images/whatsapp.svg" alt="whatsapp" />
-        </a>
-      </div>
+      <SocialLinks />
     </div>
     <div className="flex flex-col items-center">
       <button
@@ -33,14 +25,25 @@ const Footer = ({ isMobile }: Props) => (
       </button>
       <span className="flex text-xs font-bold text-[#4A4A4A]">
         * PARA COMENTAR, FAÇA SEU{" "}
-        <a className="underline text-[#004071] cursor-pointer mr-2 ml-2">
+        <a
+          className="underline text-[#004071] cursor-pointer mr-2 ml-2"
+          title="Login"
+          href="#login"
+        >
           LOGIN
         </a>
         OU{" "}
-        <a className="underline text-[#004071] cursor-pointer ml-2"> ASSINE </a>
+        <a
+          className="underline text-[#004071] cursor-pointer ml-2"
+          title="Assine"
+          href="#assine"
+        >
+          {" "}
+          ASSINE{" "}
+        </a>
       </span>
     </div>
-  </div>
+  </footer>
 );
 
 export default Footer;

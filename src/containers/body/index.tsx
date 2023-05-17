@@ -1,41 +1,14 @@
-import { useMediaQuery } from "../../hooks";
-import Bottom from "../bottom";
-import BreakLine from "../breakLine";
-import Footer from "../footer";
-import Form from "../form";
-import PersonCardMobile from "../personCard/Mobile";
-import Posts, { PostProps } from "../posts";
+import Bottom from "../../components/bottom";
+import BreakLine from "../../components/breakLine";
+import Footer from "../../components/footer";
+import Form from "../../components/form";
+import PersonCardMobile from "../../components/personCard/Mobile";
+import Player from "../../components/player";
+import Posts from "../../components/posts";
+import { posts } from "../../constants";
+import { TypeMediaQuery } from "../../types";
 
-const Body = () => {
-  const isMobile = useMediaQuery(728);
-
-  const posts: PostProps[] = [
-    {
-      title: "Oscar 2022: premiação ganha nova data para o próximo ano",
-      image: "/assets/images/post3.png",
-      date: "10/06/2020",
-      time: "08:57",
-      url: "http://google.com",
-    },
-
-    {
-      title:
-        "O novo trailer de Eternos é tudo o que você precisava para entrar no hype da Marvel",
-      image: "/assets/images/post2.png",
-      date: "10/06/2020",
-      time: "08:57",
-      url: "http://google.com",
-    },
-    {
-      title:
-        "Netflix fecha parceria com a Amblin, produtora de Steven Spielberg",
-      image: "/assets/images/post1.png",
-      date: "10/06/2020",
-      time: "08:57",
-      url: "http://google.com",
-    },
-  ];
-
+const Body = ({ isMobile }: TypeMediaQuery) => {
   return (
     <div className="flex flex-col mb-2.5 gap-[30px] p-2.5">
       <PersonCardMobile />
@@ -53,7 +26,7 @@ const Body = () => {
             </span>
           </div>
         </div>
-        <div>mp3 player here</div>
+        <Player audioFile="" />
         <div className="text-base leading-[34px] mt-4 mb-4">
           <p>
             {`A notícia de que o filme Bacurau (2019), dirigido por Kleber Mendonça
@@ -91,7 +64,10 @@ const Body = () => {
           </p>
         </div>
         <div className="flex items-center mb-[30px] mt-[30px] justify-center cursor-pointer">
-          <a href="https://www.usereserva.com/?gclid=Cj0KCQjwsIejBhDOARIsANYqkD1e4iimTLPib8nUiqoDocaSQj93vPdpWbyF2vk5o1mIw2_SWwn0RKcaAo8REALw_wcB">
+          <a
+            href="https://www.usereserva.com/?gclid=Cj0KCQjwsIejBhDOARIsANYqkD1e4iimTLPib8nUiqoDocaSQj93vPdpWbyF2vk5o1mIw2_SWwn0RKcaAo8REALw_wcB"
+            title="advertisement reserva"
+          >
             <img
               src={
                 isMobile
@@ -127,6 +103,7 @@ const Body = () => {
               <a
                 className="text-[#004071] font-['Roboto'] text-sm font-bold cursor-pointer"
                 href="#"
+                title="Assine o estado de minas"
               >
                 ASSINE O ESTADO DE MINAS
               </a>

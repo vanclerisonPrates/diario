@@ -22,7 +22,12 @@ const Posts = ({ posts }: Props) => {
       }
     >
       {posts.map((post, index) => (
-        <a href={post.url} key={index} className="cursor-pointer">
+        <a
+          href={post.url}
+          key={index}
+          className="cursor-pointer"
+          title={post.title}
+        >
           <div className={isMobile ? "flex row gap-2" : "flex flex-col gap-1"}>
             <img
               src={post.image}
@@ -35,8 +40,14 @@ const Posts = ({ posts }: Props) => {
                       height: "100px",
                       width: "100px",
                       borderRadius: "2px",
+                      objectFit: "cover",
                     }
-                  : { height: "132px", width: "235px", borderRadius: "2px" }
+                  : {
+                      height: "132px",
+                      width: "235px",
+                      borderRadius: "2px",
+                      objectFit: "cover",
+                    }
               }
             />
             <div className="flex flex-col">

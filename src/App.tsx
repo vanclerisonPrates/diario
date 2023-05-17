@@ -1,31 +1,17 @@
-import React from "react";
 import Nav from "./components/Navbar";
-import {
-  Body,
-  Bottom,
-  Footer,
-  Form,
-  Header,
-  PersonCardColumnist,
-  PersonCardMobile,
-  Sidebar,
-} from "./components";
+import { Body, Footer, Form, Header, Sidebar } from "./components";
 import { useMediaQuery } from "./hooks";
 
-interface Props {
-  message?: string;
-}
-
-const App = ({ message }: Props) => {
+const App = () => {
   const isMobile = useMediaQuery(728);
 
   return (
-    <div>
-      <Nav />
-      <div className="flex flex-col items-center sm:mt-[64px]">
-        <Header />
+    <main>
+      <Nav isMobile={isMobile} />
+      <div className="flex flex-col items-center sm:mt-[64px] p-2 justify-center">
+        <Header isMobile={isMobile} />
         <div className="flex items-start gap-[32px]">
-          <Body />
+          <Body isMobile={isMobile} />
           {!isMobile && (
             <div className="w-[310px]">
               <Sidebar />
@@ -39,7 +25,7 @@ const App = ({ message }: Props) => {
           </>
         )}
       </div>
-    </div>
+    </main>
   );
 };
 

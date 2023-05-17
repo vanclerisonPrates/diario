@@ -1,8 +1,6 @@
-import { useMediaQuery } from "../../hooks";
+import { TypeMediaQuery } from "../../types";
 
-const Header = () => {
-  const isMobile = useMediaQuery(728);
-
+const Header = ({ isMobile }: TypeMediaQuery) => {
   const mobileAdvertisement = () => (
     <>
       <span className="flex text-sm font-normal font-['Roboto']">
@@ -13,7 +11,7 @@ const Header = () => {
   );
 
   return (
-    <div className="flex flex-col max-w-[1107px] m-2.5">
+    <header className="flex flex-col max-w-[1107px] m-2.5">
       {isMobile && mobileAdvertisement()}
       <div className="mt-2.5">
         <span className="flex uppercase font-['Roboto'] text-[#004071] font-bold">
@@ -40,7 +38,7 @@ const Header = () => {
           />
         </div>
       )}
-    </div>
+    </header>
   );
 };
 
