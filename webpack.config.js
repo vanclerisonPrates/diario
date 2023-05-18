@@ -2,6 +2,7 @@ const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -10,18 +11,38 @@ module.exports = {
     filename: "bundle.js",
   },
 
+  performance: { hints: false },
   plugins: [
     new CopyPlugin({
       patterns: [
         {
           from: "./public/assets/images/*",
-          to: "assets/images",
+          to: "",
         },
       ],
     }),
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
       template: "./public/index.html",
+    }),
+    new ImageMinimizerPlugin({
+      minimizer: {
+        implementation: ImageMinimizerPlugin.squooshMinify,
+        options: {
+          encodeOptions: { mozjpeg: { quality: 100 } },
+          webp: { lossless: 1 },
+          avif: { cqLevel: 0 },
+        },
+      },
+      generator: [
+        {
+          preset: "webp",
+          implementation: ImageMinimizerPlugin.imageminGenerate,
+          options: {
+            plugings: ["imagemin-webp"],
+          },
+        },
+      ],
     }),
   ],
 
@@ -49,7 +70,8 @@ module.exports = {
       },
       {
         test: /.(jpeg|ttf|woff|png|wav|ico)$/,
-        use: ["file-loader"],
+        loader: "image-webpack-loader",
+        enforce: "pre",
       },
       {
         test: /.svg$/,

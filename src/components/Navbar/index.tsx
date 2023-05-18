@@ -110,7 +110,7 @@ const Nav = ({ isMobile }: TypeMediaQuery) => {
         {!isMobile && (
           <div className="border-l-[1px] ml-2">
             <img
-              src="assets/images/user.png"
+              src="assets/images/user.webp"
               alt="user image"
               className="center rounded-full w-[40px] h-[40px] ml-4 mr-2"
             />

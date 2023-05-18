@@ -5,7 +5,7 @@ const PersonCardColumnist = () => (
     <div className="flex gap-4">
       <div>
         <img
-          src="/assets/images/autor.png"
+          src="/assets/images/autor.webp"
           alt="autor"
           width={80}
           height={80}

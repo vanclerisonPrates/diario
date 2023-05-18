@@ -38,7 +38,7 @@ export const sideNews = [
 export const posts: PostProps[] = [
   {
     title: "Oscar 2022: premiação ganha nova data para o próximo ano",
-    image: "/assets/images/post3.png",
+    image: "/assets/images/post3.webp",
     date: "10/06/2020",
     time: "08:57",
     url: "http://google.com",
@@ -47,7 +47,7 @@ export const posts: PostProps[] = [
   {
     title:
       "O novo trailer de Eternos é tudo o que você precisava para entrar no hype da Marvel",
-    image: "/assets/images/post2.png",
+    image: "/assets/images/post2.webp",
     date: "10/06/2020",
     time: "08:57",
     url: "http://google.com",
@@ -55,7 +55,7 @@ export const posts: PostProps[] = [
   {
     title:
       "Netflix fecha parceria com a Amblin, produtora de Steven Spielberg",
-    image: "/assets/images/post1.png",
+    image: "/assets/images/post1.webp",
     date: "10/06/2020",
     time: "08:57",
     url: "http://google.com",

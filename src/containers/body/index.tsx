@@ -13,7 +13,7 @@ const Body = ({ isMobile }: TypeMediaQuery) => {
     <div className="flex flex-col mb-2.5 gap-[30px] p-2.5">
       <PersonCardMobile />
       <div className="flex flex-col max-w-[768px]">
-        <img src="/assets/images/notice.png" alt="notice" />
+        <img src="/assets/images/notice.webp" alt="notice" />
         <div className="flex gap-2 mt-3 items-start">
           <img src="/assets/images/cam.svg" alt="cam" />
           <div>
@@ -71,8 +71,8 @@ const Body = ({ isMobile }: TypeMediaQuery) => {
             <img
               src={
                 isMobile
-                  ? "/assets/images/advertisement-middle-mobile.png"
-                  : "/assets/images/advertisement-reserva.png"
+                  ? "/assets/images/advertisement-middle-mobile.webp"
+                  : "/assets/images/advertisement-reserva.webp"
               }
               alt="google-news"
               style={

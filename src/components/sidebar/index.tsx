@@ -3,7 +3,7 @@ import { sideNews } from "../../constants";
 const Sidebar = () => (
   <div>
     <img
-      src="/assets/images/ads1.png"
+      src="/assets/images/ads1.jpg"
       alt="google-news"
       height="30px"
       style={{ height: "250px", width: "300px" }}
@@ -47,7 +47,7 @@ const Sidebar = () => (
       <span className="flex text-[9px] font-['Roboto'] mb-2.5 mt-8">
         Publicidade
       </span>
-      <img src="/assets/images/ads2.png" alt="advertisement" />
+      <img src="/assets/images/ads2.jpg" alt="advertisement" />
     </div>
   </div>
 );

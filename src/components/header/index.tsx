@@ -6,7 +6,7 @@ const Header = ({ isMobile }: TypeMediaQuery) => {
       <span className="flex text-sm font-normal font-['Roboto']">
         Publicidade
       </span>
-      <img src="/assets/images/advertisement-mobile.png" alt="publicidade" />
+      <img src="/assets/images/advertisement-mobile.webp" alt="publicidade" />
     </>
   );
 
@@ -33,7 +33,7 @@ const Header = ({ isMobile }: TypeMediaQuery) => {
             Publicidade
           </span>
           <img
-            src="/assets/images/advertisement-desktop.png"
+            src="/assets/images/advertisement-desktop.jpg"
             alt="publicidade"
           />
         </div>
