@@ -1,4 +1,4 @@
-import SocialLinks from "../social-links";
+import SocialLinks from "../socialLinks";
 
 const PersonCardMobile = () => (
   <div className="flex flex-col">

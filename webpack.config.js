@@ -10,7 +10,7 @@ module.exports = {
 
   plugins: [
     new HTMLWebpackPlugin({
-      template: "./src/index.html",
+      template: "./public/index.html",
     }),
   ],
 
@@ -30,11 +30,6 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: ["ts-loader"],
-      },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: ["style-loader", "css-loader", "sass-loader", "postcss-loader"],
       },
       {
         test: /\.css$/i,

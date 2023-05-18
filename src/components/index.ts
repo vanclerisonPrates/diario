@@ -7,7 +7,7 @@ export { default as Posts } from './posts'
 export { default as Sidebar } from './sidebar'
 export { default as Footer } from './footer'
 export {default as Player} from './player'
-export {default as SocialLinks } from './social-links'
+export {default as SocialLinks } from './socialLinks'
 
 export { default as BreakLine } from './breakLine'
 

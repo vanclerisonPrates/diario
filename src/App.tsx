@@ -1,4 +1,4 @@
-import Nav from "./components/Navbar";
+import Nav from "./components/navbar";
 import { Body, Footer, Form, Header, Sidebar } from "./components";
 import { useMediaQuery } from "./hooks";
 
