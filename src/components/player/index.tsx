@@ -15,10 +15,17 @@ const Player = ({ audioFile }) => {
           src="/assets/images/play-circle.svg"
           alt="play"
           style={{ stroke: "black" }}
+          width={35}
+          height={35}
         />
         <span className="flex font-['Roboto'] text-lg">Ouça o artigo</span>
       </div>
-      <img src="/assets/images/player-download.svg" alt="play" />
+      <img
+        src="/assets/images/player-download.svg"
+        alt="play"
+        width={39}
+        height={31}
+      />
     </div>
   );
 };

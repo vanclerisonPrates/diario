@@ -13,9 +13,14 @@ const Body = ({ isMobile }: TypeMediaQuery) => {
     <div className="flex flex-col mb-2.5 gap-[30px] p-2.5">
       <PersonCardMobile />
       <div className="flex flex-col max-w-[768px]">
-        <img src="/assets/images/notice.webp" alt="notice" />
+        <img
+          src="/assets/images/notice.png"
+          alt="notice"
+          width={765}
+          height={430}
+        />
         <div className="flex gap-2 mt-3 items-start">
-          <img src="/assets/images/cam.svg" alt="cam" />
+          <img src="/assets/images/cam.svg" alt="cam" width={20} height={18} />
           <div>
             <p className="text-sm font-['Roboto']">
               Após dois anos, longa voltou a ser elegível para concorrer ao
@@ -71,10 +76,10 @@ const Body = ({ isMobile }: TypeMediaQuery) => {
             <img
               src={
                 isMobile
-                  ? "/assets/images/advertisement-middle-mobile.webp"
-                  : "/assets/images/advertisement-reserva.webp"
+                  ? "/assets/images/advertisement-middle-mobile.png"
+                  : "/assets/images/advertisement-reserva.png"
               }
-              alt="google-news"
+              alt="adverisement-reserva"
               style={
                 isMobile
                   ? { height: "250px", width: "300px" }

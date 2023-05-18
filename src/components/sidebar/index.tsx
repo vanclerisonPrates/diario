@@ -3,8 +3,8 @@ import { sideNews } from "../../constants";
 const Sidebar = () => (
   <div>
     <img
-      src="/assets/images/ads1.jpg"
-      alt="google-news"
+      src="/assets/images/ads1.png"
+      alt="advertisement"
       height="30px"
       style={{ height: "250px", width: "300px" }}
     />
@@ -31,6 +31,8 @@ const Sidebar = () => (
                         src="/assets/images/premmium.svg"
                         alt="premmium badge"
                         className="absolute mt-[5px]"
+                        width={15}
+                        height={15}
                       />
                     )}
                   </span>
@@ -47,7 +49,12 @@ const Sidebar = () => (
       <span className="flex text-[9px] font-['Roboto'] mb-2.5 mt-8">
         Publicidade
       </span>
-      <img src="/assets/images/ads2.jpg" alt="advertisement" />
+      <img
+        src="/assets/images/ads2.png"
+        alt="advertisement"
+        height={600}
+        width={300}
+      />
     </div>
   </div>
 );

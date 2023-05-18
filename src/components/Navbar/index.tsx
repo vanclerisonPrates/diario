@@ -18,7 +18,13 @@ const Nav = ({ isMobile }: TypeMediaQuery) => {
           className="border-[1px] flex items-center gap-4 p-2 rounded-lg bg-[#FAFAFA] "
           onClick={() => setMenu(!menu)}
         >
-          <img src="assets/images/menu.svg" alt="menu" className="center" />{" "}
+          <img
+            src="assets/images/menu.svg"
+            alt="menu"
+            className="center"
+            height={20}
+            width={20}
+          />{" "}
           {!isMobile && (
             <span className="font-bold font-['Roboto'] text-sm">Seções</span>
           )}
@@ -33,7 +39,12 @@ const Nav = ({ isMobile }: TypeMediaQuery) => {
                 </a>
               </li>
               <li className="mt-10">
-                <img src="/assets/images/arrow.svg" />
+                <img
+                  src="/assets/images/arrow.svg"
+                  alt="arrow"
+                  width={25}
+                  height={25}
+                />
               </li>
               <li className="mt-10">
                 <a
@@ -71,7 +82,12 @@ const Nav = ({ isMobile }: TypeMediaQuery) => {
             className="rounded-lg bg-[#FAFAFA] p-2 border-[1px] hover:bg-[#e1e1e1]"
             onClick={() => setSearch(!search)}
           >
-            <img src="assets/images/search-icon.svg" alt="search" />
+            <img
+              src="assets/images/search-icon.svg"
+              alt="search"
+              width={16}
+              height={16}
+            />
           </button>
         )}
         {search && (
@@ -86,6 +102,8 @@ const Nav = ({ isMobile }: TypeMediaQuery) => {
             src="assets/images/logo.svg"
             alt="Estado de minas logo"
             className="center"
+            height={25}
+            width={228}
           />
           {!isMobile && <span className="text-[#666666]">Política</span>}
         </div>
@@ -97,6 +115,8 @@ const Nav = ({ isMobile }: TypeMediaQuery) => {
               src="assets/images/whatsapp-white.svg"
               alt="Estado de minas logo"
               className="center "
+              width={40}
+              height={40}
             />
           </a>
         )}
@@ -110,7 +130,7 @@ const Nav = ({ isMobile }: TypeMediaQuery) => {
         {!isMobile && (
           <div className="border-l-[1px] ml-2">
             <img
-              src="assets/images/user.webp"
+              src="assets/images/user.png"
               alt="user image"
               className="center rounded-full w-[40px] h-[40px] ml-4 mr-2"
             />

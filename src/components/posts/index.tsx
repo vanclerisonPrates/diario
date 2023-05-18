@@ -31,7 +31,7 @@ const Posts = ({ posts }: Props) => {
           <div className={isMobile ? "flex row gap-2" : "flex flex-col gap-1"}>
             <img
               src={post.image}
-              alt="google-news"
+              alt={post.title}
               height={isMobile ? "100px" : "132px"}
               width={isMobile ? "100px" : "235px"}
               style={

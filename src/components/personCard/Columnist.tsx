@@ -5,7 +5,7 @@ const PersonCardColumnist = () => (
     <div className="flex gap-4">
       <div>
         <img
-          src="/assets/images/autor.webp"
+          src="/assets/images/autor.png"
           alt="autor"
           width={80}
           height={80}
@@ -20,7 +20,12 @@ const PersonCardColumnist = () => (
         </div>
         <h3 className="text-lg font-bold font-['Roboto']">Tamaki Ryushi</h3>
         <div className="flex gap-[9px] items-center">
-          <img src="/assets/images/clock.svg" alt="clock" />
+          <img
+            src="/assets/images/clock.svg"
+            alt="clock"
+            width={16}
+            height={16}
+          />
           <span className="flex text-xs">02/02/2021 08:22</span>
         </div>
       </div>
